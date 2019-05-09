@@ -32,7 +32,7 @@ Für die Umsetzung dieses Projektes muss in folgendes Investiert werden:
 
 \vspace{1em}
 
-Um das Projekt durchführen zu können wird demnach ein mindestkapital von 14'941 Franken vorausgesetzt.
+Um das Projekt durchführen zu können wird demnach ein Mindestkapital von 14'941 Franken vorausgesetzt.
 
 \chapter{Geschätzte Betriebskosten und Ertrag}
 Die Betriebskosten setzten sich aus 2 Faktoren zusammen
@@ -41,22 +41,32 @@ Die Betriebskosten setzten sich aus 2 Faktoren zusammen
 	\item Personalkosten bei einer fehlerhaften Erkennung
 \end{enumerate}
 
-Die Stromkosten werden durch einen Verbraucher erzeugt, dem RFID Lesegerät. Diese Lesegerät konsumiert 35 Watt. Dies entspricht bei einem stündigen Betrieb 35 W/h. Wird dieses gerät während 365 Tagen ununterbrochen verwendet, resultiert daraus ein Stromverbrauch von 306.6 kW/h. Bei ungefähr 20 Rappen pro kW/h (\cite{StromPreisAdmin2019}) entspricht dies rund 61.32 Franken, welche jedes Jahr zu entrichten ist.
+Die Stromkosten werden durch einen Verbraucher erzeugt, dem RFID HF Lesegerät. Dieses Gerät konsumiert 35 Watt (\cite{DatenblattRFIDReader}). Dies entspricht bei einem stündigen Betrieb 35 W/h. Wird dieses gerät während 365 Tagen ununterbrochen verwendet, resultiert daraus ein Stromverbrauch von 306.6 kW/h. Bei ungefähr 20 Rappen pro kW/h (\cite{StromPreisAdmin2019}) entspricht dies rund 61.32 Franken, welche jedes Jahr zu entrichten ist.
 
-Bei einer Fehlerhaften erkennung würden weitere Betriebskosten entstehen. Ein geschulter Mitarbeiter könnte gemäss eigener Schätzung gut 5min benätigen um den Behälter zu überprüfun und festzustellen, dass sich die Aussortierung um einen Fehler handelt.
-Unter der Annahme, dass dieser Fall jeden Arbeitstag einmal geschehen würde, bräuchte der Mitarbeiter rund 17h pro Jahr für die Identifizierung einer fehlerhaften Erkennung. Dies entspricht run 1'183 franken bei einer Vollkostenrechnung eines Mitarbeiters mit einem Lohn von ca. 6'000 Franken (\cite{KostenProMitarbeiter2013}).
+Bei einer fehlerhaften Erkennung würden weitere Betriebskosten entstehen. Ein geschulter Mitarbeiter könnte gemäss eigener Schätzung gut 5min betätigen um den Behälter zu Überprüfung und festzustellen, dass sich die Aussortierung um einen Fehler handelt.
+Unter der Annahme, dass dieser Fall jeden Arbeitstag einmal geschehen würde, bräuchte der Mitarbeiter rund 17h pro Jahr für die Identifizierung einer fehlerhaften Erkennung. Dies entspricht rund 1'183 Franken bei einer Vollkostenrechnung eines Mitarbeiters mit einem Lohn von ca. 6'000 Franken (\cite{KostenProMitarbeiter2013}).
 
 Zusammen ergibt dies Jährliche kosten von rund 1'244.32 Franken.
 
-Die möglichen Einsparungen entstehen durch das fernbleiben einer Aufwändigen Suche nach einem einzel exemplar. Diese würde sich wie folgt zusammensetzten:
-Bei 110'000 Behälter bräuchte man Statisch gesehen rund 55'001 versuche um das Exemplar zu finden. würde nun ein Mitarbeiter wieder fünf minuten für jeden Behälter benötigen, würde die suche annähernd 4'600 Stunden andauern. Bei einem Mitarbeiter mit einem Lohn von 4'500 Franken würden die gesammtkosten auf rund 263'000 Franken betragen.
+Die möglichen Einsparungen entstehen durch das Fernbleiben einer aufwendigen Suche nach einem Einzel-Exemplar. Diese würde sich wie folgt zusammensetzten:
+Bei 110'000 Behälter bräuchte man Statisch gesehen rund 55'001 versuche, um das Exemplar zu finden. würde nun ein Mitarbeiter wieder fünf Minuten für jeden Behälter benötigen, würde die suche annähernd 4'600 Stunden andauern. Bei einem Mitarbeiter mit einem Lohn von 4'500 Franken würden die Gesammtkosten auf rund 263'000 Franken betragen.
 
-Bei Kosten von 263'000 für eine Suche nach einem einzelnen Exemplar würde dieses bei bemerkung des Verlustest andstandslos ersetzt werden, da eine neubeschaffung in den meisten fällen kostengünstiger ist. Sollte es sich jedoch um ein Unikat handeln, müsste dennoch dieser Suchprozess durchgeführt werden.
+Bei Kosten von 263'000 für eine Suche nach einem einzelnen Exemplar würde dieses bei Bemerkung des Verlustes ersetzt werden, da eine Neubeschaffung in den meisten fällen kostengünstiger ist. Sollte es sich jedoch um ein Unikat handeln, müsste dennoch dieser Suchprozess durchgeführt werden.
 
-Weiter würde bei einer deplazierung eines Objektes die Reputation der Speicherbibliothek sowie das Vertrauen in diese nachhaltig schaden nehmen.
+Weiter würde bei einer Deplatzierung eines Objektes die Reputation der Speicherbibliothek sowie das Vertrauen in diese nachhaltig Schaden nehmen.
 
-Weiter ist zu bedenken, dass selbst bei einer Wahrscheinlichkeit von nur 0.000001\% bereits ein Exemplar deplaziert werden würde pro Million exemplare.
+Weiter ist zu bedenken, dass selbst bei einer Wahrscheinlichkeit von nur 0.000001\% Bereits ein Exemplar deplatziert werden würde pro Million Exemplare.
 
 \chapter{Wirtschaftliche Machbarkeit des Projekts}
+Die Initial-kosten von 14'941 Franken mit den weiteren Betriebskosten von 1'244.32 Franken pro Jahr dienen der Verhinderung eines Menschlichen Fehlers im Einlagerungsprozess. Dank dieser Umsetzung kann verhinder werden, dass ein Reputationsschaden entsteht, welcher schlimmstenfalls auch zu Politischen folgen führen kann.
+Durch das Verhindern eben dieser negativen folgen stellt sich der Nutzen klar über die Initial-kosten von rund 14'941 Franken.
+
+Für die Initiale Phase der Realisierung müssten finanzielle Ressourcen von rund 14'941 Franken benötigt. Für die Beschaffung dieser Finanzen ist alleine die Speicherbibliothek zuständig.
 
 
+\section{Grösste Kosten und Risiken}
+Die grössten Kosten sowie auch Risiken entstehen bei der Anpassung des bestehenden Lagerverwaltungssystems, da zu diesem keine Informationen bekannt sind. Auch die Einhaltung der Zeitfrist von einem Monet für die Auslieferung der Schnittstellen ist aufgrund des fehlenden Wissens über die Software sowie die Kapazitäten des Unternehmens Söcklin mit grösseren Risiken verbunden.
+
+Ein Weiteres Terminrisiko geht zudem vom Hardwarehersteller aus, da dieser unter Umständen eine längere Zeit für die Lieferung der Hardware benötigt.
+
+Beide Terminrisiken können jedoch während der Implementation der Software weitestgehend abgefangen werden, sodass beide Parteien.

@@ -1,11 +1,87 @@
 \chapter{Technische Charakteristiken und Spezifikationen}
 
 \section{Allgemeines Design und technische Voraussetzungen}
+\subsection{Hardware}
+Die Hardware besteht aus einem RFID Lesegerätes mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich rund 50cm über dem Förderband befinden und direkt nach unten ausgerichtet sein. Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte plaziert (siehe \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
+
+Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann.
+
+\begin{figure}
+	\centering
+	\includegraphics[keepaspectratio,width=\linewidth]{Positionierung_Antennen}
+	\caption{Antennenposition Eins und Zwei}
+	\label{fig:positionAntennen}
+\end{figure}
+
+
+Durch die Ausrichtung der Antennen wird weiter vorausgesetzt, dass das Lesegerät mit den Antennen eine maximale Distanz von 53.85cm lesen können. Jeder Behälter enthält gemäss Angaben im Normalfall 50 Exemplare. Daraus ergibt sich, dass das Lesegerät für den Normalfall mindestens 50 Exemplare in der Zeit auslesen muss, welche das Förderband benötigt um die Kiste ca. 60cm weit zu transportieren.
 
 \section{Vergleich der vorgeschlagenen Lösung und der existierenden Situation}
+Die existierende Situation enthält momentan noch keine Möglichkeit der Verifikation des Inhaltes eines Behälters. Demnach würde durch die Durchführung dieses Projektes die Wahrscheinlichkeit des Deplatzieren massiv verringern.
 
-\section{Gründe für den Vorteil der vorgeschlagenen Lösung}
+\section{Vorteile und deren Gründe der vorgeschlagenen Lösung}
+\begin{itemize}
+	\item Durch die Rückbeziehung, welche mittels der Mehrheit der gelesenen Tags auf die ID der Behälter zulässt, kann auf ein Barcodeleser verzichtet werden. Dies ermöglicht eine positionsunabhängige Erkennung des Behälters.
+	\item Die direkte Aussortierung des Behälters bringt mehrere Vorteile. So wird der bereits bestehende Prozess, mit welchem die Mitarbeiter vertraut sind, verwendet. Dies führt weiter zu dem Umstand, dass keine weiteren Fehlerquellen durch zusätzliche manuelle Interaktion durch einen Mitarbeiter, entstehen. Ein weiterer Vorteil liegt darin, dass die Erkennung sehr früh geschieht, da die Aussortierung noch vor der Einlagerung des Behälters stattfindet.
+	\item Der Einsatz mehrerer Antennen bringt den Vorteil, dass Tags mit verschiedenen Ausrichtungen identifiziert werden können. Dies aus dem Grund, dass sich die Tags bei unterschiedlichen Ausrichtungen unterschiedlich stark beeinflussen. Weiter kann durch den Einsatz mehrere Antennen der Suchradius vergrössert werden. Dies führt zu dem Umstand, dass sich der Behälter länger in einem Suchradius befindet, wodurch mehr Zeit für die Inventarisierung der Tags zur Verfügung steht. Deshalb können insgesamt mehr Tags identifiziert werden.
+	\item Die Installation der RFID Antennen soll unmittelbar bei der Wiegestation erfolgen. Dies bringt den Vorteil, dass mehr Zeit für die Inventarisierung zur Verfügung steht, da der Behälter für eine kurze Zeit auf der Waage still steht. Weiter ist mit keiner Interferenz durch andere Behälter oder Objekte, wie Metall, zu rechnen, da sich nur Luft zwischen der Antenne und dem Behälter befindet.
+\end{itemize}
 
-\section{Vorgeschlagene Zulieferungsquellen und Aquisitionsmethoden}
+
+\section{Vorgeschlagene Zulieferungsquellen}
+Als Zulieferungsquellen für die RFID Hardware wird zu Feig Electronis geraten, da dieser Hersteller im Vergleich mit weiteren in Europa ansässigen Unternehmen ein gutes Preisleistungsverhältnis aufzeigt. Weiter spricht auch der Umstand, dass RFID Lösungsanbieter wie Bibliotheka auf Feig Electronis als Hersteller vertrauen, für Feig.
+
+Für die Anpassung der Lagerverwaltungssoftware muss aufgrund der bestehenden Infrastruktur auf Stöcklin zurückgegriffen werden.
+
+Die Umsetzung des Projektes soll, bedingt durch das vorhandene Lernpotential sowie tiefe Kosten, durch eine weitere Bachelorarbeit an einer Hochschule umgesetzt werden.
 
 \section{Geschätzte Kosten und Quellen für die Basis dieser Schätzungen}
+\subsection{Hardware}
+\begin{tabularx}{\textwidth}{|r|X|r|r|}
+	\hline
+	\textbf{Menge} & \textbf{Produkt} & \textbf{Kosten(CHF)} & \textbf{Kosten gesamt(CHF)} \\
+	\hline
+	1 & RFID Reader ID ISC.LR2500-A (Feig) & 1'300 & 1'300 \\
+	\hline
+	2 & RFID Antennen ID ISC.ANT800/600 (Feig)& 830 & 1'660 \\
+	\hline
+	2 & RFID Antennenkabel ID ISC.ANT.C-A (Feig) & 22 & 44 \\
+	\hline
+	1 & RFID Multiplexer 8-fach HF Multiplexer (Feig) & 540 & 540 \\
+	\hline
+	1 & Netzteil ID NET.24V-B (Feig) & 33 & 33 \\
+	\hline
+	1 & Netzkabel ID CAB.NET.24V-B-EU (Feig) & 5 & 5 \\
+	\hline
+	1 & Raspberry Pi 3 Model B+ (pi-shop.ch)& 39 & 39 \\
+	\hline
+	1 & Sandisk Extreme 128GB Class 10 (digitec.ch)& 45 & 45 \\
+	\hline
+	& & & \textbf{3378} \\
+	\hline
+\end{tabularx}
+
+Die Kosten dieser Schätzung aller Feig Electronics Artikel basieren auf der eingeholten Offerte (Siehe Abbildung \ref{fig:offerteFeig}), bei welcher EUR in CHF mit einem Wechselkurs von 1.14 auf welchem noch 8\% MwSt. Hinzugerechnet wurden.
+Für die weiteren Artikel wurden auf den entsprechenden Seiten die Kosten verwendet (Besuch der Seite am 08.05.2019).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio,width=.5\linewidth]{Screenshot_Email_Feig}
+	\caption{E-Mail der Offerte}
+	\label{fig:offerteFeig}
+\end{figure}
+
+\subsection{Software}
+\begin{tabularx}{\textwidth}{|r|r|X|r|}
+	\hline
+	\textbf{Stunden(h)} & \textbf{Lohn(CHF/h)} & \textbf{Beschrieb} & \textbf{Kosten gesamt(CHF)} \\
+	\hline
+	50 & 200 & Umsetzung, sofern die Software die Befehle bereits über das Netzwerk entgegennimmt. & 10'000 \\
+	\hline
+	250 & - & Umsetzung des Projektes von einem Studenten im Rahmen einer Bachelorarbeit & 1'000 \\
+	& & & \textbf{11'000} \\
+	\hline
+\end{tabularx}
+
+Die Stundenkosten basieren auf aufgerundeten Werten, welche ein Freelancer in der Schweiz verdienen kann.
+Für die Kosten der Bachelorarbeit wurden die Kosten übernommen, welche die Hochschule Luzern für deren Durchführung für eine Bachelorarbeit mit einem einzelnen Studenten verrechnet.

@@ -21,12 +21,6 @@ Für die Umsetzung dieses Projektes muss in folgendes Investiert werden:
 	\hline
 	Montagehalterung & 250 \\
 	\hline
-	Raspberry Pi 3 Model B+ (pi-shop.ch) & 39 \\
-	\hline
-	Sandisk Extreme 128GB Class 10 (digitec.ch) & 45 \\
-	\hline
-	Raspberry Pi Netzteil (digitec.ch) & 25 \\
-	\hline
 	Softwareanpassungen Stöcklin & 10'000 \\
 	\hline
 	Durchführung des Projektes & 1'000 \\
@@ -40,8 +34,29 @@ Für die Umsetzung dieses Projektes muss in folgendes Investiert werden:
 
 Um das Projekt durchführen zu können wird demnach ein mindestkapital von 14'941 Franken vorausgesetzt.
 
-\chapter{Geschätzte Betriebskosten}
+\chapter{Geschätzte Betriebskosten und Ertrag}
+Die Betriebskosten setzten sich aus 2 Faktoren zusammen
+\begin{enumerate}
+	\item Stromkosten der elektronischen Geräte
+	\item Personalkosten bei einer fehlerhaften Erkennung
+\end{enumerate}
+
+Die Stromkosten werden durch einen Verbraucher erzeugt, dem RFID Lesegerät. Diese Lesegerät konsumiert 35 Watt. Dies entspricht bei einem stündigen Betrieb 35 W/h. Wird dieses gerät während 365 Tagen ununterbrochen verwendet, resultiert daraus ein Stromverbrauch von 306.6 kW/h. Bei ungefähr 20 Rappen pro kW/h (\cite{StromPreisAdmin2019}) entspricht dies rund 61.32 Franken, welche jedes Jahr zu entrichten ist.
+
+Bei einer Fehlerhaften erkennung würden weitere Betriebskosten entstehen. Ein geschulter Mitarbeiter könnte gemäss eigener Schätzung gut 5min benätigen um den Behälter zu überprüfun und festzustellen, dass sich die Aussortierung um einen Fehler handelt.
+Unter der Annahme, dass dieser Fall jeden Arbeitstag einmal geschehen würde, bräuchte der Mitarbeiter rund 17h pro Jahr für die Identifizierung einer fehlerhaften Erkennung. Dies entspricht run 1'183 franken bei einer Vollkostenrechnung eines Mitarbeiters mit einem Lohn von ca. 6'000 Franken (\cite{KostenProMitarbeiter2013}).
+
+Zusammen ergibt dies Jährliche kosten von rund 1'244.32 Franken.
+
+Die möglichen Einsparungen entstehen durch das fernbleiben einer Aufwändigen Suche nach einem einzel exemplar. Diese würde sich wie folgt zusammensetzten:
+Bei 110'000 Behälter bräuchte man Statisch gesehen rund 55'001 versuche um das Exemplar zu finden. würde nun ein Mitarbeiter wieder fünf minuten für jeden Behälter benötigen, würde die suche annähernd 4'600 Stunden andauern. Bei einem Mitarbeiter mit einem Lohn von 4'500 Franken würden die gesammtkosten auf rund 263'000 Franken betragen.
+
+Bei Kosten von 263'000 für eine Suche nach einem einzelnen Exemplar würde dieses bei bemerkung des Verlustest andstandslos ersetzt werden, da eine neubeschaffung in den meisten fällen kostengünstiger ist. Sollte es sich jedoch um ein Unikat handeln, müsste dennoch dieser Suchprozess durchgeführt werden.
+
+Weiter würde bei einer deplazierung eines Objektes die Reputation der Speicherbibliothek sowie das Vertrauen in diese nachhaltig schaden nehmen.
+
+Weiter ist zu bedenken, dass selbst bei einer Wahrscheinlichkeit von nur 0.000001\% bereits ein Exemplar deplaziert werden würde pro Million exemplare.
 
 \chapter{Wirtschaftliche Machbarkeit des Projekts}
 
-\chapter{Finanzieller Plan des Projekts}
+

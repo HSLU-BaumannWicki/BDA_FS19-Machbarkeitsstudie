@@ -23,16 +23,16 @@ Für die Umsetzung dieses Projektes muss in Folgendes investiert werden:
 	\hline
 	Softwareanpassungen Stöcklin & 10'000 \\
 	\hline
-	Durchführung des Projektes & 1'000 \\
+	Durchführung des Projektes Mitarbeiterkosten & 6'500 \\
 	\hline
 	\hline
-	 & \textbf{14'941} \\
+	 & \textbf{20'332} \\
 	 \hline
 \end{tabularx}
 
 \vspace{1em}
 
-Um das Projekt durchführen zu können wird demnach ein Mindestkapital von 14'941 Franken vorausgesetzt.
+Um das Projekt durchführen zu können wird demnach ein Mindestkapital von 20'332 Franken vorausgesetzt.
 
 \chapter{Geschätzte Betriebskosten und Ertrag}
 Die Betriebskosten setzen sich aus zwei Faktoren zusammen
@@ -41,30 +41,31 @@ Die Betriebskosten setzen sich aus zwei Faktoren zusammen
 	\item Personalkosten bei einer fehlerhaften Erkennung
 \end{enumerate}
 
-Die Stromkosten werden durch einen Verbraucher erzeugt, dem RFID HF Lesegerät. Dieses Gerät konsumiert 35 Watt (\cite{DatenblattRFIDReader}). Dies entspricht bei einem stündigen Betrieb 35 W/h. Wird dieses Gerät während 365 Tagen ununterbrochen verwendet, resultiert daraus ein Stromverbrauch von 306.6 kW/h. Bei ungefähr 20 Rappen pro kW/h (\cite{StromPreisAdmin2019}) entspricht dies rund 61.32 Franken, welche jedes Jahr fällig werden ist.
+Die Stromkosten werden durch einen Verbraucher erzeugt, dem RFID HF Lesegerät. Dieses Gerät konsumiert 35 Watt (\cite{DatenblattRFIDReader}). Dies entspricht bei einem stündigen Betrieb 35 W/h. Wird dieses Gerät während 365 Tagen ununterbrochen verwendet, resultiert daraus ein Stromverbrauch von 306.6 kW/h. Bei ungefähr 20 Rappen pro kW/h (\cite{StromPreisAdmin2019}) entspricht dies rund 61.30 Franken, welche jedes Jahr fällig werden ist.
 
-Bei einer fehlerhaften Erkennung würden weitere Betriebskosten entstehen. Ein geschulter Mitarbeiter könnte gemäss eigener Schätzung gut fünf Minuten benötigen, um den Behälter zu überprüfen und festzustellen, dass es sich bei der Aussortierung um einen Fehler handelt.
-Unter der Annahme, dass dieser Fall jeden Arbeitstag einmal geschehen würde, bräuchte der Mitarbeiter rund 17h pro Jahr für die Identifizierung einer fehlerhaften Erkennung. Dies entspricht rund 1'183 Franken bei einer Vollkostenrechnung eines Mitarbeiters mit einem Lohn von ca. 6'000 Franken (\cite{KostenProMitarbeiter2013}).
+Bei einer fehlerhaften Erkennung würden weitere Betriebskosten entstehen. Ein geschulter Mitarbeiter benötigt gut 20 Minuten, um den Behälter zu überprüfen und festzustellen, dass es sich bei der Aussortierung um einen Fehler handelt.
 
-Zusammen ergibt dies Jährliche kosten von rund 1'244.32 Franken.
+Unter der Annahme, dass dieser Fall jeden Monat bis zu viermal geschehen würde, bräuchte der Mitarbeiter rund 16h pro Jahr für die Identifizierung einer fehlerhaften Erkennung. Dies entspricht rund 1'135.7 Franken bei einer Vollkostenrechnung eines Mitarbeiters mit einem Lohn von ca. 6'000 Franken (\cite{KostenProMitarbeiter2013}).
+
+Zusammen ergibt dies Jährliche kosten von rund 1'196 Franken.
 
 Die möglichen Einsparungen entstehen durch das Fernbleiben einer aufwendigen Suche nach einem Einzelexemplar. Diese würde sich wie folgt zusammensetzen:
-Bei 110'000 Behälter bräuchte man durchschnittlich gesehen rund 55'000 Versuche, um das Exemplar zu finden. Würde nun ein Mitarbeiter wieder fünf Minuten für jeden Behälter benötigen, würde die Suche annähernd 4'600 Stunden andauern. Bei einem Mitarbeiter mit einem Lohn von 4'500 Franken würden die Gesamtkosten auf rund 263'000 Franken betragen.
+Bei 110'000 Behälter bräuchte man durchschnittlich gesehen rund 55'000 Versuche, um das Exemplar zu finden. Die durchschnittliche Anzahl Durchsuchungen kann jedoch anhand von weiteren Informationen, welche dem Lagerverwaltungssystem bekannt sind, auf ca. 35'000 Versuche reduziert werden. Würde nun ein Mitarbeiter wieder 20 Minuten für die Durchsuchung eines Behälters benötigen, würde die Suche annähernd 12'000 Stunden andauern. Bei einem Mitarbeiter mit einem Lohn von 6'000 Franken würden die Gesamtkosten auf rund 852'000 Franken betragen.
 
-Bei Kosten von 263'000 Franken für eine Suche nach einem einzelnen Exemplar würde dieses bei Bemerkung des Verlustes ersetzt werden, da eine Neubeschaffung in den meisten Fällen kostengünstiger ist. Sollte es sich jedoch um ein Unikat handeln, müsste dennoch dieser Suchprozess durchgeführt werden.
+Bei Kosten von 852'000 Franken für eine Suche nach einem einzelnen Exemplar würde dieses bei Bemerkung des Verlustes ersetzt werden, da eine Neubeschaffung in fast allen Fällen kostengünstiger und Ökologischer ist. Sollte es sich jedoch um ein Unikat handeln, müsste dennoch dieser Suchprozess durchgeführt werden.
 
 Weiter würde bei einer Deplatzierung eines Objektes die Reputation der Speicherbibliothek sowie das Vertrauen in diese nachhaltig Schaden nehmen.
 
 Weiter ist zu bedenken, dass selbst bei einer Wahrscheinlichkeit von nur 0.000001\% einer Deplatzierung pro Einlagerung, bereits ein Exemplar pro Million Exemplare deplatziert werden würde.
 
 \chapter{Wirtschaftliche Machbarkeit des Projekts}
-Die Initialkosten von 14'941 Franken mit den weiteren Betriebskosten von 1'244.32 Franken pro Jahr dienen der Verhinderung eines menschlichen Fehlers im Einlagerungsprozess. Dank dieser Umsetzung kann verhindert werden, dass ein Reputationsschaden entsteht, welcher schlimmstenfalls auch zu politischen Folgen führen kann.
-Durch das Verhindern eben dieser negativen Folgen stellt sich der Nutzen klar über die Initialkosten von rund 14'941 Franken.
+Die Initialkosten von 20'332 Franken mit den weiteren Betriebskosten von 1'244.32 Franken pro Jahr dienen der Reduzierung eines menschlichen Fehlers im Einlagerungsprozess. Dank dieser Umsetzung kann das Risiko reduziert werden, dass ein Reputationsschaden entsteht, welcher schlimmstenfalls auch zu politischen Folgen führen kann.
+Durch das Verhindern eben dieser negativen Folgen stellt sich der Nutzen klar über die Initialkosten von rund 20'332 Franken.
 
-Für die Initiale Phase der Realisierung müssten finanzielle Ressourcen von rund 14'941 Franken benötigt. Für die Beschaffung dieser Finanzen ist alleine die Speicherbibliothek zuständig.
+Für die initiale Phase der Realisierung, müssten finanzielle Ressourcen von rund 20'332 Franken benötigt. Für die Beschaffung dieser Finanzen ist alleine die Speicherbibliothek zuständig.
 
 \section{Grösste Kosten und Risiken}
-Die grössten Kosten sowie auch Risiken entstehen bei der Anpassung des bestehenden Lagerverwaltungssystems, da zu diesem keine Informationen bekannt sind. Auch die Einhaltung der Zeitfrist von einem Monat für die Auslieferung der Schnittstellen ist aufgrund des fehlenden Wissens über die Software sowie die Kapazitäten des Unternehmens Stöcklin mit grösseren Risiken verbunden.
+Die grössten Kosten sowie auch Risiken entstehen bei der Anpassung des bestehenden Lagerverwaltungssystems, da zu dieser durch Stöcklin noch keine Informationen, bezüglich des Aufwandes, bekannt sind. Auch die Einhaltung der Zeitfrist von einem Monat für die Auslieferung der Schnittstellen ist aufgrund des fehlenden Wissens über die Software sowie die Kapazitäten des Unternehmens Stöcklin mit grösseren Risiken verbunden.
 
 Ein weiteres Terminrisiko geht zudem vom Hardwarehersteller aus, da dieser unter Umständen eine längere Zeit für die Lieferung der Hardware benötigt.
 

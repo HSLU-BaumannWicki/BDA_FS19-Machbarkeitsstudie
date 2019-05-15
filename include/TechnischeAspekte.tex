@@ -1,8 +1,12 @@
 \chapter{Technische Charakteristiken und Spezifikationen}
 
 \section{Allgemeines Design und technische Voraussetzungen}
+
+\subsection{Technische Limitation High Frequency RFID}
+%TODO SCHREIBEN!!!
+
 \subsection{Hardware}
-Die Hardware besteht aus einem RFID Lesegerätes mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich ebenfalls direkt neben dem Förderband befinden, jedoch um einen Winkel von mindesten 60\SIUnitSymbolDegree gedreht sein, um die Tags, welche sich in der Flucht des Förderbands befinden, lesen zu können. Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte platziert (siehe \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
+Die Hardware besteht aus einem RFID Lesegerätes mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich ebenfalls direkt neben dem Förderband befinden, jedoch um einen Winkel von mindesten 60\SIUnitSymbolDegree gedreht sein, um die Tags, welche sich in der Flucht des Förderbands befinden, lesen zu können. Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte platziert (siehe Abbildung \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
 
 Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann.
 
@@ -23,7 +27,7 @@ Die existierende Situation enthält momentan noch keine Möglichkeit der Verifik
 \begin{itemize}
 	\item Durch die Rückbeziehung, welche mittels der Mehrheit der gelesenen Tags auf die ID der Behälter zulässt, kann auf ein Barcodeleser verzichtet werden. Dies ermöglicht eine positionsunabhängige Erkennung des Behälters.
 	\item Die direkte Aussortierung des Behälters bringt mehrere Vorteile. So wird der bereits bestehende Prozess, mit welchem die Mitarbeiter vertraut sind, verwendet. Dies führt weiter zu dem Umstand, dass keine weiteren Fehlerquellen durch zusätzliche manuelle Interaktion durch einen Mitarbeiter, entstehen. Ein weiterer Vorteil liegt darin, dass die Erkennung sehr früh geschieht, da die Aussortierung noch vor der Einlagerung des Behälters stattfindet.
-	\item Der Einsatz mehrerer Antennen bringt den Vorteil, dass Tags mit verschiedenen Ausrichtungen identifiziert werden können. Dies aus dem Grund, dass sich die Tags bei unterschiedlichen Ausrichtungen unterschiedlich stark beeinflussen. Weiter kann durch den Einsatz mehrere Antennen der Suchradius vergrössert werden. Dies führt zu dem Umstand, dass sich der Behälter länger in einem Suchradius befindet, wodurch mehr Zeit für die Inventarisierung der Tags zur Verfügung steht. Deshalb können insgesamt mehr Tags identifiziert werden.
+	\item Der Einsatz mehrerer Antennen bringt den Vorteil, dass Tags mit verschiedenen Ausrichtungen identifiziert werden können. Dies aus dem Grund, dass sich die Tags bei unterschiedlichen Ausrichtungen unterschiedlich stark beeinflussen. Weiter kann durch den Einsatz mehrere Antennen der Suchradius vergrössert werden. Dies führt zu dem Umstand, dass sich der Behälter länger in einem Suchradius befindet, wodurch mehr Zeit für die Inventarisierung der Tags zur Verfügung steht. Deshalb können insgesamt mehr Tags identifiziert  werden.
 	\item Die Installation der RFID Antennen soll unmittelbar bei der Wiegestation erfolgen. Dies bringt den Vorteil, dass mehr Zeit für die Inventarisierung zur Verfügung steht, da der Behälter für eine kurze Zeit auf der Waage still steht. Weiter ist mit keiner Interferenz durch andere Behälter oder Objekte, wie Metall, zu rechnen, da sich nur Luft zwischen der Antenne und dem Behälter befindet.
 \end{itemize}
 
@@ -33,7 +37,7 @@ Als Zulieferungsquellen für die RFID Hardware wird zu Feig Electronis geraten, 
 
 Für die Anpassung des Lagerverwaltungssystems muss aufgrund der bestehenden Infrastruktur auf Stöcklin zurückgegriffen werden.
 
-Die Umsetzung des Projektes soll, bedingt durch das vorhandene Lernpotential sowie tiefe Kosten, durch eine weitere Bachelorarbeit an einer Hochschule umgesetzt werden.
+Die Umsetzung des Projektes der Implementierung des untersuchten Konzeptes soll durch eine weitere Bachelorarbeit an einer Hochschule umgesetzt werden. Dies bedingt durch das vorhandene Lernpotential sowie die tiefen Kosten einer studentischen Arbeit an einer Hochschule.
 
 \section{Geschätzte Kosten und Quellen für die Basis dieser Schätzungen}
 \subsection{Hardware}
@@ -83,5 +87,5 @@ Für die weiteren Artikel wurden auf den entsprechenden Seiten die Kosten verwen
 	\hline
 \end{tabularx}
 
-Die Stundenkosten basieren auf aufgerundeten Werten, welche ein Freelancer in der Schweiz verdienen kann.
+Die verwendeten Stundenkosten basieren auf aufgerundeten Werten, welche ein Freelancer in der Schweiz verdienen kann.
 Für die Kosten der Bachelorarbeit wurden die Kosten übernommen, welche die Hochschule Luzern für deren Durchführung für eine Bachelorarbeit mit einem einzelnen Studenten verrechnet.

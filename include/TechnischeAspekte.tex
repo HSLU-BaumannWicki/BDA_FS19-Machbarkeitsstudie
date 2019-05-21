@@ -2,15 +2,16 @@
 
 \section{Allgemeines Design und technische Voraussetzungen}
 
-\subsection{Technische Limitation High Frequency RFID}
-Für HF Tags (wie diejenigen die auch in der Speicherbibliothek verwendet werden) ist die Betriebsfrequenz durch den ISO Standard 18000-3 auf 13.56MHz festgelegt und die Maximale Distanz auf 1m beschränkt \parencite{chawla2007}.
+\subsection{Technische Limitationen High Frequency RFID}
+Für HF Tags (wie diejenigen die auch in der Speicherbibliothek verwendet werden) ist die Betriebsfrequenz durch den ISO Standard 18000-3 auf 13.56MHz festgelegt und typische Lesereichweiten liegen bei etwa einem Meter \parencite{chawla2007}.
 
-Um weitere Technische Limitation zu erkennen wurden, mit der Hardware von Hyientech, verschiedene Versuche (Siehe Anhang \ref{ap:Versuche}) durchgeführt welche zu folgenden Erkenntnisse geführt haben:
+Um weitere technische Limitation zu erkennen wurden, mit der Hardware von Hyientech, verschiedene Versuche (Siehe Anhang \ref{ap:Versuche}) durchgeführt, welche zu folgenden Erkenntnisse geführt haben:
+
 \begin{itemize}
 	\item Distanz zwischen gestapelten Tags muss mindestens 3cm betragen.
 	\item Distanz zwischen aneinandergereihten Tags muss mindestens 1cm betragen.
 	\item Winkel zwischen Tag und Antenne darf nicht grösser als 60\SIUnitSymbolDegree sein.
-	\item Tags welche Metall durchdringen können nicht erkennt werden.
+	\item Tags, welche sich hinter Metall befinden, können nicht erkennt werden.
 	\item Maximale Distanz nur bei optimalen Winkel zwischen Antenne und Tag möglich.
 \end{itemize}
 
@@ -24,7 +25,7 @@ Die Hardware besteht aus einem RFID Lesegeräte, mit zwei angeschlossenen Antenn
 	\label{fig:positionAntennen}
 \end{figure}
 
-Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann. Deshalb kann durch den Einsatz mehrerer Antenne gewährleistet werden, dass die Tags der verbreitesten Lagermöglichkeiten gelesen werden können (siehe Abbildung \ref{fig:lagermöglichkeitExemplare}).
+Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann. Deshalb kann durch den Einsatz mehrerer Antennen gewährleistet werden, dass die Tags der am häufigsten im Hochregallager vorzufindenden Lagermöglichkeiten gelesen werden können (siehe Abbildung \ref{fig:lagermöglichkeitExemplare}).
 
 \begin{figure}[htb]
 	\centering
@@ -36,7 +37,7 @@ Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der T
 Durch die Ausrichtung der Antennen wird weiter vorausgesetzt, dass das Lesegerät mit den Antennen eine maximale Distanz von ca. 65cm lesen können. Jeder Behälter enthält gemäss Angaben im Schnitt 50 Exemplare. Daraus ergibt sich, dass das Lesegerät 50 Exemplare in der Zeit auslesen muss, welche das Förderband benötigt um die Kiste ca. 60cm weit zu transportieren.
 
 \section{Vergleich der vorgeschlagenen Lösung und der existierenden Situation}
-Die existierende Situation enthält momentan noch keine Möglichkeit der Verifikation des Inhaltes eines Behälters. Demnach würde durch die Durchführung dieses Projektes die Wahrscheinlichkeit des deplazieren eines Exemplares, in einen nicht vorgesehenen Behälter, verringern.
+Die existierende Situation enthält momentan noch keine Möglichkeit der Verifikation des Inhaltes eines Behälters. Demnach würde durch die Durchführung dieses Projektes die Wahrscheinlichkeit des Deplatzieren eines Exemplares, in einen nicht vorgesehenen Behälter, verringern.
 
 \section{Vorteile und deren Gründe der vorgeschlagenen Lösung}
 \begin{itemize}

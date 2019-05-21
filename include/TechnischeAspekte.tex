@@ -1,39 +1,59 @@
 \chapter{Technische Charakteristiken und Spezifikationen}
 
 \section{Allgemeines Design und technische Voraussetzungen}
+
+\subsection{Technische Limitationen High Frequency RFID}
+Für HF Tags (wie diejenigen die auch in der Speicherbibliothek verwendet werden) ist die Betriebsfrequenz durch den ISO Standard 18000-3 auf 13.56MHz festgelegt und typische Lesereichweiten liegen bei etwa einem Meter \parencite{chawla2007}.
+
+Um weitere technische Limitation zu erkennen wurden, mit der Hardware von Hyientech, verschiedene Versuche (Siehe Anhang \ref{ap:Versuche}) durchgeführt, welche zu folgenden Erkenntnisse geführt haben:
+
+\begin{itemize}
+	\item Distanz zwischen gestapelten Tags muss mindestens 3cm betragen.
+	\item Distanz zwischen aneinandergereihten Tags muss mindestens 1cm betragen.
+	\item Winkel zwischen Tag und Antenne darf nicht grösser als 60\SIUnitSymbolDegree sein.
+	\item Tags, welche sich hinter Metall befinden, können nicht erkennt werden.
+	\item Maximale Distanz nur bei optimalen Winkel zwischen Antenne und Tag möglich.
+\end{itemize}
+
 \subsection{Hardware}
-Die Hardware besteht aus einem RFID Lesegerätes mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich ebenfalls direkt neben dem Förderband befinden, jedoch um einen Winkel von mindesten 60\SIUnitSymbolDegree gedreht sein, um die Tags, welche sich in der Flucht des Förderbands befinden, lesen zu können. Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte platziert (siehe \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
+Die Hardware besteht aus einem RFID Lesegeräte, mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich am Ende des Förderbandes befinden, sodass ein Winkel von 90\SIUnitSymbolDegree erreicht wird, um die Tags, welche sich in der Flucht des Förderbands befinden, lesen zu können (siehe Abbildung \ref{fig:positionAntennen}). Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte platziert (siehe Abbildung \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
 
-Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann.
-
-\begin{figure}
+\begin{figure}[htb]
 	\centering
 	\includegraphics[keepaspectratio,width=\linewidth]{Positionierung_Antennen}
 	\caption{Antennenposition Eins und Zwei}
 	\label{fig:positionAntennen}
 \end{figure}
 
+Die Platzierung der Antennen steht in direktem Einfluss mit der Lesbarkeit der Tags, da die Ausrichtung der Tags im Verhältnis zur Antenne dazu führen kann, dass dieser nicht gelesen werden kann. Deshalb kann durch den Einsatz mehrerer Antennen gewährleistet werden, dass die Tags der am häufigsten im Hochregallager vorzufindenden Lagermöglichkeiten gelesen werden können (siehe Abbildung \ref{fig:lagermöglichkeitExemplare}).
 
-Durch die Ausrichtung der Antennen wird weiter vorausgesetzt, dass das Lesegerät mit den Antennen eine maximale Distanz von 53.85cm lesen können. Jeder Behälter enthält gemäss Angaben im Normalfall 50 Exemplare. Daraus ergibt sich, dass das Lesegerät für den Normalfall mindestens 50 Exemplare in der Zeit auslesen muss, welche das Förderband benötigt um die Kiste ca. 60cm weit zu transportieren.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[keepaspectratio,width=\linewidth]{Lagerung_Exemplare}
+	\caption{Meistgenutzte Lagermöglichkeiten von Exemplaren}
+	\label{fig:lagermöglichkeitExemplare}
+\end{figure}
+
+Durch die Ausrichtung der Antennen wird weiter vorausgesetzt, dass das Lesegerät mit den Antennen eine maximale Distanz von ca. 65cm lesen können. Jeder Behälter enthält gemäss Angaben im Schnitt 50 Exemplare. Daraus ergibt sich, dass das Lesegerät 50 Exemplare in der Zeit auslesen muss, welche das Förderband benötigt um die Kiste ca. 60cm weit zu transportieren.
 
 \section{Vergleich der vorgeschlagenen Lösung und der existierenden Situation}
-Die existierende Situation enthält momentan noch keine Möglichkeit der Verifikation des Inhaltes eines Behälters. Demnach würde durch die Durchführung dieses Projektes die Wahrscheinlichkeit des Deplatzieren massiv verringern.
+Die existierende Situation enthält momentan noch keine Möglichkeit der Verifikation des Inhaltes eines Behälters. Demnach würde durch die Durchführung dieses Projektes die Wahrscheinlichkeit des Deplatzieren eines Exemplares, in einen nicht vorgesehenen Behälter, verringern.
 
 \section{Vorteile und deren Gründe der vorgeschlagenen Lösung}
 \begin{itemize}
-	\item Durch die Rückbeziehung, welche mittels der Mehrheit der gelesenen Tags auf die ID der Behälter zulässt, kann auf ein Barcodeleser verzichtet werden. Dies ermöglicht eine positionsunabhängige Erkennung des Behälters.
-	\item Die direkte Aussortierung des Behälters bringt mehrere Vorteile. So wird der bereits bestehende Prozess, mit welchem die Mitarbeiter vertraut sind, verwendet. Dies führt weiter zu dem Umstand, dass keine weiteren Fehlerquellen durch zusätzliche manuelle Interaktion durch einen Mitarbeiter, entstehen. Ein weiterer Vorteil liegt darin, dass die Erkennung sehr früh geschieht, da die Aussortierung noch vor der Einlagerung des Behälters stattfindet.
-	\item Der Einsatz mehrerer Antennen bringt den Vorteil, dass Tags mit verschiedenen Ausrichtungen identifiziert werden können. Dies aus dem Grund, dass sich die Tags bei unterschiedlichen Ausrichtungen unterschiedlich stark beeinflussen. Weiter kann durch den Einsatz mehrere Antennen der Suchradius vergrössert werden. Dies führt zu dem Umstand, dass sich der Behälter länger in einem Suchradius befindet, wodurch mehr Zeit für die Inventarisierung der Tags zur Verfügung steht. Deshalb können insgesamt mehr Tags identifiziert werden.
-	\item Die Installation der RFID Antennen soll unmittelbar bei der Wiegestation erfolgen. Dies bringt den Vorteil, dass mehr Zeit für die Inventarisierung zur Verfügung steht, da der Behälter für eine kurze Zeit auf der Waage still steht. Weiter ist mit keiner Interferenz durch andere Behälter oder Objekte, wie Metall, zu rechnen, da sich nur Luft zwischen der Antenne und dem Behälter befindet.
+	\item Durch die Rückbeziehung, welche über die Mehrheit der gelesenen Tags Rückschlüsse auf die ID der Behälter zulässt, kann auf einen Barcodeleser verzichtet werden. Dies ermöglicht eine positionsunabhängige Erkennung des Behälters.
+	\item Die direkte Aussortierung des Behälters bringt mehrere Vorteile. So wird der bereits bestehende Prozess des Aussortierens, mit welchem die Mitarbeiter vertraut sind, verwendet. Das Aussortieren geschieht zurzeit bei Behältern, welche Exemplare enthalten die über den Behälterrand hinwegschauen, sowie bei Behältern, welche zu Schwer sind. Weiter führt der Umstand der direkten Aussortierung dazu, dass keine weiteren Fehlerquellen durch zusätzliche manuelle Interaktion durch einen Mitarbeiter entstehen. Ein weiterer Vorteil liegt darin, dass die Erkennung sehr früh geschieht, da die Aussortierung noch vor der Einlagerung des Behälters stattfindet.
+	\item Der Einsatz mehrerer Antennen bringt den Vorteil, dass Tags mit verschiedenen Ausrichtungen identifiziert werden können. Dies aus dem Grund, dass sich die Tags bei unterschiedlichen Ausrichtungen unterschiedlich stark beeinflussen. Weiter kann durch den Einsatz mehrere Antennen der Suchradius vergrössert werden. Dies führt zu dem Umstand, dass sich der Behälter länger in einem Suchradius befindet, wodurch mehr Zeit für die Inventarisierung der Tags zur Verfügung steht. Deshalb können insgesamt mehr Tags identifiziert  werden.
+	\item Die Installation der RFID Antennen soll, wie in Abbildung \ref{fig:positionAntennen} ersichtlich, für die erste Antenne gleich bei der Eckpartie und für die zweite unmittelbar nach der Wiegestation erfolgen. Dies bringt den Vorteil, dass mehr Zeit für die Inventarisierung zur Verfügung steht, da der Behälter für eine kurze Zeit auf der Waage still steht. Weiter ist mit keiner Interferenz durch andere Behälter oder Objekte, wie Metall, zu rechnen, da sich nur Luft zwischen der Antenne und dem Behälter befindet. Zudem können durch die Unterschiedlichen Ausrichtungen der Antennen mehr Tags Identifiziert werden.
 \end{itemize}
 
 
 \section{Vorgeschlagene Zulieferungsquellen}
-Als Zulieferungsquellen für die RFID Hardware wird zu Feig Electronis geraten, da dieser Hersteller im Vergleich mit weiteren in Europa ansässigen Unternehmen ein gutes Preisleistungsverhältnis aufzeigt. Weiter spricht auch der Umstand, dass RFID Lösungsanbieter wie Bibliotheka auf Feig Electronis als Hersteller vertrauen, für Feig.
+Als Zulieferungsquelle für die RFID Hardware wird zu Feig Electronis geraten, da dieser Hersteller im Vergleich mit weiteren in Europa ansässigen Unternehmen ein gutes Preisleistungsverhältnis aufzeigt. Weiter spricht auch der Umstand, dass RFID Lösungsanbieter wie Bibliotheka auf Feig Electronis als Hersteller vertrauen.
 
 Für die Anpassung des Lagerverwaltungssystems muss aufgrund der bestehenden Infrastruktur auf Stöcklin zurückgegriffen werden.
 
-Die Umsetzung des Projektes soll, bedingt durch das vorhandene Lernpotential sowie tiefe Kosten, durch eine weitere Bachelorarbeit an einer Hochschule umgesetzt werden.
+Die Umsetzung des Projektes der Implementierung des untersuchten Konzeptes soll durch eine weitere Bachelorarbeit an einer Hochschule umgesetzt werden. Dies bedingt durch das vorhandene Lernpotential sowie die tiefen Kosten einer studentischen Arbeit an einer Hochschule.
 
 \section{Geschätzte Kosten und Quellen für die Basis dieser Schätzungen}
 \subsection{Hardware}
@@ -57,14 +77,14 @@ Die Umsetzung des Projektes soll, bedingt durch das vorhandene Lernpotential sow
 	\hline
 	1 & Sandisk Extreme 128GB Class 10 (digitec.ch)& 45 & 45 \\
 	\hline
-	& & & \textbf{3378} \\
+	& & & \textbf{3'378} \\
 	\hline
 \end{tabularx}
 
-Die Kosten dieser Schätzung aller Feig Electronics Artikel basieren auf der eingeholten Offerte (Siehe Abbildung \ref{fig:offerteFeig}), bei welcher EUR in CHF mit einem Wechselkurs von 1.14 auf welchem noch 8\% MwSt. Hinzugerechnet wurden.
-Für die weiteren Artikel wurden auf den entsprechenden Seiten die Kosten verwendet (Besuch der Seite am 08.05.2019).
+Die Kosten dieser Schätzung aller Feig Electronics Artikel basieren auf der eingeholten Offerte (Siehe Abbildung \ref{fig:offerteFeig}), bei welcher EUR in CHF mit einem Wechselkurs von 1.14 auf welchem noch 7.7\% MwSt. hinzugerechnet wurden.
+Für die weiteren Artikel wurde auf den in der Tabelle ersichtliche Webseiten, die Kosten für das jeweilige Produkt herausgeschrieben (Besuch der Webseiten am 08.05.2019).
 
-\begin{figure}[h!]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[keepaspectratio,width=.5\linewidth]{Screenshot_Email_Feig}
 	\caption{E-Mail der Offerte}
@@ -83,5 +103,5 @@ Für die weiteren Artikel wurden auf den entsprechenden Seiten die Kosten verwen
 	\hline
 \end{tabularx}
 
-Die Stundenkosten basieren auf aufgerundeten Werten, welche ein Freelancer in der Schweiz verdienen kann.
+Die verwendeten Stundenkosten basieren auf aufgerundeten Werten, welche ein Freelancer in der Schweiz verdienen kann.
 Für die Kosten der Bachelorarbeit wurden die Kosten übernommen, welche die Hochschule Luzern für deren Durchführung für eine Bachelorarbeit mit einem einzelnen Studenten verrechnet.

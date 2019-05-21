@@ -3,7 +3,16 @@
 \section{Allgemeines Design und technische Voraussetzungen}
 
 \subsection{Technische Limitation High Frequency RFID}
-%TODO SCHREIBEN!!!
+Für HF Tags (wie diejenigen die auch in der Speicherbibliothek verwendet werden) ist die Betriebsfrequenz durch den ISO Standard 18000-3 auf 13.56MHz festgelegt und die Maximale Distanz auf 1m beschränkt \parencite{chawla2007}.
+
+Um weitere Technische Limitation zu erkennen wurden, mit der Hardware von Hyientech, verschiedene Versuche (Siehe Anhang \ref{ap:Versuche}) durchgeführt welche zu folgenden Erkenntnisse geführt haben:
+\begin{itemize}
+	\item Distanz zwischen gestapelten Tags muss mindestens 3cm betragen.
+	\item Distanz zwischen aneinandergereihten Tags muss mindestens 1cm betragen.
+	\item Winkel zwischen Tag und Antenne darf nicht grösser als 60\SIUnitSymbolDegree sein.
+	\item Tags welche Metall durchdringen können nicht erkennt werden.
+	\item Maximale Distanz nur bei optimalen Winkel zwischen Antenne und Tag möglich.
+\end{itemize}
 
 \subsection{Hardware}
 Die Hardware besteht aus einem RFID Lesegeräte, mit zwei angeschlossenen Antennen. Eine der beiden Antennen soll sich rund 60cm weiter entfernt und direkt neben dem Förderband befinden. Die Zweite Antenne soll sich am Ende des Förderbandes befinden, sodass ein Winkel von 90\SIUnitSymbolDegree erreicht wird, um die Tags, welche sich in der Flucht des Förderbands befinden, lesen zu können (siehe Abbildung \ref{fig:positionAntennen}). Um zu verhindern, dass Behälter, welche sich auf dem benachbarten Förderband befinden, ausgelesen werden, wird zwischen den beiden Förderbändern eine einfache Aluminiumplatte platziert (siehe Abbildung \ref{fig:positionAntennen}). Die durchgeführten Versuche haben ergeben, dass diese ausreicht, um ein Auslesen der Tags dahinter zu verhindern.
